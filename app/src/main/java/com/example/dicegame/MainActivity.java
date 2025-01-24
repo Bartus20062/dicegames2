@@ -1,5 +1,6 @@
 package com.example.dicegame;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -13,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     private int liczbaRzutow = 0;
     private int [] diceImages;
     private ImageView[] imageViews;
+    private ImageView test;
 
     private TextView wynikLosowania2;
     private TextView wynikGry2;
@@ -33,16 +35,21 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        imageViews = new ImageView[]{findViewById(R.id.imageView0), findViewById(R.id.imageView1), findViewById(R.id.imageView2), findViewById(R.id.imageView3), findViewById(R.id.imageView4)};
-        diceImages= new int[]{R.drawable.blank_dice,R.drawable.dice1,R.drawable.dice2,R.drawable.dice3,R.drawable.dice4,R.drawable.dice5,R.drawable.dice6};
-
         setContentView(R.layout.activity_main);
+        imageViews = new ImageView[] {findViewById(R.id.imageView0), findViewById(R.id.imageView1),
+                findViewById(R.id.imageView2), findViewById(R.id.imageView3),
+                findViewById(R.id.imageView4)};
+
+        diceImages= new int[] {R.drawable.blank_dice,R.drawable.dice1,R.drawable.dice2,R.drawable.dice3,R.drawable.dice4,R.drawable.dice5,R.drawable.dice6};
+
+
         kosc1 = findViewById(R.id.kosc1);
         kosc2 = findViewById(R.id.kosc2);
         kosc3 = findViewById(R.id.kosc3);
         kosc4 = findViewById(R.id.kosc4);
         kosc5 = findViewById(R.id.kosc5);
+
+        test = findViewById(R.id.imageView0);
 
         iloscrzutow[0] = kosc1;
         iloscrzutow[1] = kosc2;
@@ -80,6 +87,11 @@ public class MainActivity extends AppCompatActivity {
             rzutyKosc[i] = rzut;
             suma = suma + rzut;
         }
+         for(int i=0; i<imageViews.length;i++) {
+             imageViews[i].setImageResource(diceImages[rzutyKosc[i]]);
+         }
+
+
         updateScore(suma);
         updateRollCount();
         displayDiceResults(rzutyKosc);
@@ -113,5 +125,7 @@ public class MainActivity extends AppCompatActivity {
         for(int i=0;i<iloscrzutow.length;i++){
             iloscrzutow[i].setText(String.valueOf(diceResults[i]));
         }
+
+        imageViews[3].setImageResource(R.drawable.dice2);
     }
 }

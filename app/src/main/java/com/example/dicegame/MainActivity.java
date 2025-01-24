@@ -108,8 +108,11 @@ public class MainActivity extends AppCompatActivity {
         wynikLosowania2.setText("Wynik tego losowania: 0");
         wynikGry2.setText("Wynik gry: 0");
         liczbaRzutow2.setText("Liczba rzutów: 0");
-        for(int i=0; i< imageViews.length;i++) {
-            imageViews[i].setImageResource(R.drawable.blank_dice);
+//        for(int i=0; i< imageViews.length;i++) {
+//            imageViews[i].setImageResource(R.drawable.blank_dice);
+//        }
+        for(ImageView dice : imageViews){
+            dice.setImageResource(R.drawable.blank_dice);
         }
     }
     void updateScore(int newScore) {

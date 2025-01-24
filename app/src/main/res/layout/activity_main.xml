@@ -32,53 +32,23 @@
 
         <TextView
             android:id="@+id/kosc1"
-            android:text=" ? "
-            android:textSize="50dp"
-            android:textAlignment="center"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginRight="9dp"
-            android:background="@color/white" />
+            style="@style/diceTextView" />
 
         <TextView
             android:id="@+id/kosc2"
-            android:text=" ? "
-            android:textSize="50dp"
-            android:textAlignment="center"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginRight="9dp"
-            android:background="@color/white" />
+            style="@style/diceTextView" />
 
         <TextView
             android:id="@+id/kosc3"
-            android:text=" ? "
-            android:textSize="50dp"
-            android:textAlignment="center"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginRight="9dp"
-            android:background="@color/white" />
+            style="@style/diceTextView" />
 
         <TextView
             android:id="@+id/kosc4"
-            android:text=" ? "
-            android:textSize="50dp"
-            android:textAlignment="center"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginRight="9dp"
-            android:background="@color/white" />
+            style="@style/diceTextView" />
 
         <TextView
             android:id="@+id/kosc5"
-            android:text=" ? "
-            android:textSize="50dp"
-            android:textAlignment="center"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginRight="9dp"
-            android:background="@color/white" />
+            style="@style/diceTextView"/>
     </LinearLayout>
 
     <LinearLayout
